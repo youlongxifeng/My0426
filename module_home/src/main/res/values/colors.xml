@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource">
     <color name="tab_unselect">#c9c9c9</color>
     <color name="bg_btn">#dadada</color>
+
+    <color name="main_color_selected">#979797</color>
+    <color name="main_color_normal" >#333333</color>
 </resources>

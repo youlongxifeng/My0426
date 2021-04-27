@@ -51,14 +51,7 @@ public class HomeActivity extends BaseSupportActivity implements BaseMainFragmen
     @Override
     public void initView(@Nullable Bundle savedInstanceState) {
         super.initView(savedInstanceState);
-//        ISupportFragment homeFragment = SupportHelper.findFragment(getSupportFragmentManager(), HomeFragment.class);
-//        if(homeFragment==null){
-//            homeFragment= HomeFragment.newInstance();
-//            loadRootFragment(R.id.container, homeFragment);
-//        }
-        Fragment fragment = (Fragment) ARouter.getInstance().build("/biz_home/HomeFragment").navigation();
         SupportFragment firstFragment = findFragment(FirstFragment.class);
-
         if (firstFragment == null) {
             mFragments[FIRST] = FirstFragment.newInstance();
             mFragments[SECOND] = SecondFragment.newInstance();
@@ -83,7 +76,7 @@ public class HomeActivity extends BaseSupportActivity implements BaseMainFragmen
     }
 
     private void initView() {
-        mBottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        mBottomBar = findViewById(R.id.bottomBar);
 
         mBottomBar.addItem(new BottomBarTab(this, R.drawable.ic_home_white_24dp))
                 .addItem(new BottomBarTab(this, R.drawable.ic_discover_white_24dp))

@@ -5,11 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 
+import com.alc.lib_common.Constants;
 import com.alc.module_home.R;
 import com.alc.module_home.base.BaseMainFragment;
+import com.alc.module_use.ui.use.UseFragment;
+import com.alibaba.android.arouter.launcher.ARouter;
 
 /**
  * @Title:
@@ -33,6 +37,15 @@ public class FourthFragment  extends BaseMainFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_fourth, container, false);
         return mView;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        UseFragment fragment = (UseFragment) ARouter.getInstance().build(Constants.Router.Use.FRAGMENT_USE).navigation();
+        if (findChildFragment(fragment.getClass()) == null) {
+            loadRootFragment(R.id.fl_fourth_container, fragment.newInstance());
+        }
     }
 
 //    @Override

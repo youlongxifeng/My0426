@@ -9,4 +9,8 @@ android {
 
 dependencies {
 
+    implementation project(':module_project')
+    implementation project(':module_square')
+    implementation project(':module_official')
+    implementation project(':module_use')
 }

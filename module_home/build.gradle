@@ -8,8 +8,8 @@ android {
 }
 
 dependencies {
-    api project(':module_project')
-    api project(':module_square')
-    api project(':module_official')
-    api project(':module_use')
+    implementation project(':module_project')
+    implementation project(':module_square')
+    implementation project(':module_official')
+    implementation project(':module_use')
 }

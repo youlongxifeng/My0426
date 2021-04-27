@@ -5,10 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.alc.lib_common.Constants;
 import com.alc.module_home.R;
 import com.alc.module_home.base.BaseMainFragment;
+import com.alc.module_project.ui.project.ProjectFragment;
+import com.alibaba.android.arouter.launcher.ARouter;
 
 /**
  * @Title:
@@ -34,7 +38,21 @@ public class FirstFragment   extends BaseMainFragment {
         return view;
     }
 
-//    @Override
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        ProjectFragment fragment = (ProjectFragment) ARouter.getInstance().build(Constants.Router.Project.FRAGMENT_PROJECT).navigation();
+        if (findChildFragment(fragment.getClass()) == null) {
+           loadRootFragment(R.id.fl_first_container, fragment.newInstance());
+         }
+    }
+
+    @Override
+    public void lazyInit() {
+        super.lazyInit();
+    }
+
+    //    @Override
 //    public void onLazyInitView(@Nullable Bundle savedInstanceState) {
 //        super.onLazyInitView(savedInstanceState);
 //

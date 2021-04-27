@@ -5,6 +5,8 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.alc.lib_common.Constants;
 import com.alc.lib_common.ui.base.BaseSupportActivity;
@@ -22,29 +24,21 @@ import com.weikaiyun.fragmentation.SupportHelper;
  */
 @Route(path = Constants.Router.Main.A_MAIN)
 public class MainActivity extends BaseSupportActivity {
-
-
-
     @Override
     public int getContentViewID() {
         return R.layout.main_activity;
     }
+
     @Override
     public void initView(@Nullable Bundle savedInstanceState) {
         super.initView(savedInstanceState);
-//        var mainFragment = SupportHelper.findFragment(supportFragmentManager, DemoMainFragment::class.java)
-//        if (mainFragment == null) {
-//            mainFragment = DemoMainFragment.newInstance()
-//            loadRootFragment(R.id.container, mainFragment)
-//        }
-        ISupportFragment mainFragment= SupportHelper.findFragment(getSupportFragmentManager(), MainFragment.class);
-        Log.i("YYY","mainFragment=="+(mainFragment==null));
-        if(mainFragment==null){
-            mainFragment=MainFragment.newInstance();
+        ISupportFragment mainFragment = SupportHelper.findFragment(getSupportFragmentManager(), Main2Fragment.class);
+        if (mainFragment == null) {
+            mainFragment = Main2Fragment.newInstance();
             loadRootFragment(R.id.container, mainFragment);
         }
-
     }
+
 
     @Override
     protected void onStop() {

@@ -15,9 +15,15 @@ import com.alc.lib_third.third.ThirdHelper;
  * @data: 2021/4/26
  */
 public class BaseApplication extends MultiDexApplication {
+    private static BaseApplication instance;
+
+    public static BaseApplication getInstance() {
+        return instance;
+    }
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
+        this.instance=this;
         MultiDex.install(this);
     }
 

@@ -5,10 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.alc.lib_common.Constants;
 import com.alc.module_home.R;
 import com.alc.module_home.base.BaseMainFragment;
+import com.alc.module_square.ui.square.SquareFragment;
+import com.alibaba.android.arouter.launcher.ARouter;
 
 /**
  * @Title:
@@ -33,7 +37,14 @@ public class ThirdFragment  extends BaseMainFragment {
         View view = inflater.inflate(R.layout.fragment_third, container, false);
         return view;
     }
-
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        SquareFragment fragment = (SquareFragment) ARouter.getInstance().build(Constants.Router.Square.FRAGMENT_SQUARE).navigation();
+        if (findChildFragment(fragment.getClass()) == null) {
+            loadRootFragment(R.id.fl_third_container, fragment.newInstance());
+        }
+    }
 //    @Override
 //    public void onLazyInitView(@Nullable Bundle savedInstanceState) {
 //        super.onLazyInitView(savedInstanceState);
