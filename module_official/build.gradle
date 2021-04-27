@@ -1,0 +1,13 @@
+apply from: "../module.build.gradle"
+android {
+    defaultConfig {
+        if (isModule.toBoolean()) {
+            applicationId rootProject.ext.android.applicationId
+        }
+    }
+}
+
+dependencies {
+
+}
+//公众号

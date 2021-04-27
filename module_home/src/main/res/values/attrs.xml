@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AlbumCategoryItem">
+        <attr name="aci_icon" format="reference"/>
+        <attr name="aci_title" format="string"/>
+        <attr name="aci_center_line" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="RadioCategoryItem">
+        <attr name="rci_category" format="integer"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--菜单栏-->
+    <string-array name="bottom_menu">
+        <item>@string/Tool</item>
+        <item>@string/View</item>
+        <item>@string/Other</item>
+        <item>@string/Resources</item>
+    </string-array>
+
+
+</resources>

@@ -3,7 +3,7 @@ ext {
     android = [
             compileSdkVersion: 30,
             buildToolsVersion: "30.0.3",
-            applicationId    : "com.alc.my0421",
+            applicationId    : "com.alc.my0426",
             minSdkVersion    : 21,
             targetSdkVersion : 30,
             versionCode      : 1,

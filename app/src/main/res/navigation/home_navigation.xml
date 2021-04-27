@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_container"
+    app:startDestination="@id/mainfragment">
+
+    <fragment
+        android:id="@+id/mainfragment"
+        android:name="com.alc.my0426.myapp.MainFragment"
+        android:label="fragment_nav1"
+        tools:layout="@layout/nav1_fragmeng">
+        <action
+            android:id="@+id/action_mainFragment_to_nav1Fragment"
+            app:destination="@id/nav1Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_nav2Fragment"
+            app:destination="@id/nav2Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_nav3Fragment"
+            app:destination="@id/nav3Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_nav4Fragment"
+            app:destination="@id/nav4Fragment" />
+
+        <action
+            android:id="@+id/action_nav1Fragment_to_detailsfragment"
+            app:destination="@id/detailsfragment" />
+        <action
+            android:id="@+id/action_nav2Fragment_to_detailsfragment"
+            app:destination="@id/detailsfragment" />
+        <action
+            android:id="@+id/action_nav3Fragment_to_detailsfragment"
+            app:destination="@id/detailsfragment" />
+        <action
+            android:id="@+id/action_nav4Fragment_to_detailsfragment"
+            app:destination="@id/detailsfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav1Fragment"
+        android:name="com.alc.my0426.myapp.Nav1Fragment"
+        android:label="Nav3Fragment">
+        <action
+            android:id="@+id/action_nav1Fragment_to_detailsfragment"
+            app:destination="@id/detailsfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav2Fragment"
+        android:name="com.alc.my0426.myapp.Nav2Fragment"
+        android:label="fragment_nav2"
+        tools:layout="@layout/nav2_fragmeng">
+        <action
+            android:id="@+id/action_nav2Fragment_to_detailsfragment"
+            app:destination="@id/detailsfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav3Fragment"
+        android:name="com.alc.my0426.myapp.Nav3Fragment"
+        android:label="fragment_nav2"
+        tools:layout="@layout/nav3_fragmeng">
+        <action
+            android:id="@+id/action_nav3Fragment_to_detailsfragment"
+            app:destination="@id/detailsfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav4Fragment"
+        android:name="com.alc.my0426.myapp.Nav4Fragment"
+        android:label="Nav3Fragment">
+        <action
+            android:id="@+id/action_nav4Fragment_to_detailsfragment"
+            app:destination="@id/detailsfragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsfragment"
+        android:name="com.alc.my0426.myapp.DetailsFragment"
+        android:label="DetailsFragment" />
+</navigation>

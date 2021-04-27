@@ -1,6 +1,12 @@
+include ':module_use'
+include ':module_official'
+include ':module_square'
+include ':module_project'
 include ':module_main'
 include ':module_home'
 include ':lib_third'
 include ':lib_common'
+include ':fragmentation'
+include ':fragmentation_swipeback'
 include ':app'
 rootProject.name = "My0426"

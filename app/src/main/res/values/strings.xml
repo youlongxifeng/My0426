@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">My0426</string>
+    <!--首页-->
+    <string name="Tool">工具</string>
+    <string name="View">View</string>
+    <string name="Other">其他</string>
+    <string name="Resources">资源</string>
+    <string name="WeChatStorageActivity">存储空间</string>
 </resources>

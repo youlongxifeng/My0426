@@ -13,6 +13,21 @@ public interface Constants {
             String F_MAIN = "/main/main";
             String A_MAIN = "/main/MainActivity";
         }
+        interface  Official{
+            String FRAGMENT_OFFICIAL="/official/official";
+        }
+        interface  Use{
+            String FRAGMENT_USE="/use/use";
+        }
+        interface  Square{
+            String FRAGMENT_SQUARE="/Square/Square";
+        }
+        interface  Project{
+            String FRAGMENT_PROJECT="/Project/Project";
+        }
+
+
+
         interface Home {
             String F_MAIN = "/home/main";
             String F_SEARCH = "/home/search";
