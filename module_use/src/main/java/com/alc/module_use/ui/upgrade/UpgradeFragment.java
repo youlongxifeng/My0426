@@ -1,4 +1,4 @@
-package com.alc.module_use.ui.use;
+package com.alc.module_use.ui.upgrade;
 
 import com.alc.lib_common.Constants;
 import com.alc.lib_common.ui.base.BaseSupportFragment;
@@ -9,16 +9,12 @@ import com.alibaba.android.arouter.facade.annotation.Route;
  * @Title:
  * @Description:
  * @author: zou
- * @data: 2021/4/27
+ * @data: 2021/4/28
  */
-@Route(path = Constants.Router.Use.FRAGMENT_USE)
-public class UseFragment  extends BaseSupportFragment {
-    public static UseFragment newInstance() {
-        return new UseFragment();
-    }
-
+@Route(path = Constants.Router.Use.F_UPGRADE)
+public class UpgradeFragment extends BaseSupportFragment {
     @Override
     public int getLayoutId() {
-        return R.layout.use_fragment;
+        return R.layout.message_fragment;
     }
 }

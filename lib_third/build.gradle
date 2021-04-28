@@ -66,5 +66,7 @@ dependencies {
     api rootProject.ext.dependencies["logging-interceptor"]
     api rootProject.ext.dependencies["gson"]
 
-    api rootProject.ext.dependencies["arouter-api"]
+    api 'com.alibaba:arouter-api:1.5.1'
+    api 'com.alibaba:arouter-annotation:1.0.6'
+
 }

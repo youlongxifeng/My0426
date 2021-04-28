@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import com.alc.lib_common.Constants;
 import com.alc.module_home.R;
 import com.alc.module_home.base.BaseMainFragment;
-import com.alc.module_project.ui.project.ProjectFragment;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 /**

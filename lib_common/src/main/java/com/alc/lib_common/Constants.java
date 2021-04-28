@@ -14,7 +14,7 @@ public interface Constants {
             String A_MAIN = "/main/MainActivity";
         }
         interface  Project{
-            String FRAGMENT_PROJECT="/Project/Project";
+            String FRAGMENT_PROJECT="/project/project";
         }
         interface  Official{
             String FRAGMENT_OFFICIAL="/official/official";
@@ -25,6 +25,9 @@ public interface Constants {
         }
         interface  Use{
             String FRAGMENT_USE="/use/use";
+            String F_MESSAGE = "/use/message";
+            String F_SETTING="/use/setting";
+            String F_UPGRADE="/use/upgrade";
         }
 
 

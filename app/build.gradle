@@ -56,10 +56,10 @@ dependencies {
 
     implementation 'org.greenrobot:eventbus:3.2.0'
 
-    implementation 'com.alibaba:arouter-api:1.5.1'
+
     annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
 
     api project(':lib_common')
-    api project(':module_home')
+    //api project(':module_home')
     api project(':module_main')
 }
