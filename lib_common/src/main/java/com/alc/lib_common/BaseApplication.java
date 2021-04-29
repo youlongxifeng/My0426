@@ -3,9 +3,14 @@ package com.alc.lib_common;
 import android.app.Application;
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.ProcessLifecycleOwner;
+import androidx.lifecycle.ViewModelStore;
+import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
+import com.alc.lib_common.lifecycle.ApplicationObserver;
 import com.alc.lib_third.third.ThirdHelper;
 
 /**
@@ -14,8 +19,9 @@ import com.alc.lib_third.third.ThirdHelper;
  * @author: zou
  * @data: 2021/4/26
  */
-public class BaseApplication extends MultiDexApplication {
+public class BaseApplication extends MultiDexApplication implements ViewModelStoreOwner {
     private static BaseApplication instance;
+    private ViewModelStore mAppViewModelStore;
 
     public static BaseApplication getInstance() {
         return instance;
@@ -25,16 +31,23 @@ public class BaseApplication extends MultiDexApplication {
         super.attachBaseContext(base);
         this.instance=this;
         MultiDex.install(this);
+        ProcessLifecycleOwner.get().getLifecycle().addObserver(new ApplicationObserver());
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-
+        mAppViewModelStore=new ViewModelStore();
         ThirdHelper.getInstance(this)
                 .initRouter()
               //  .initBugly(false)
               .initCrashView();
             //    .initUM();
+    }
+
+    @NonNull
+    @Override
+    public ViewModelStore getViewModelStore() {
+        return mAppViewModelStore;
     }
 }

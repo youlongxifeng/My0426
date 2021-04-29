@@ -66,6 +66,11 @@ dependencies {
     api rootProject.ext.dependencies["logging-interceptor"]
     api rootProject.ext.dependencies["gson"]
 
+    //动态替换BaseUrl库 使用可参考 https://github.com/JessYanCoding/RetrofitUrlManager
+    api 'me.jessyan:retrofit-url-manager:1.4.0'
+
+    api 'com.kunminx.archi:unpeek-livedata:4.4.1-beta1'
+
     api 'com.alibaba:arouter-api:1.5.1'
     api 'com.alibaba:arouter-annotation:1.0.6'
 

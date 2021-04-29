@@ -7,25 +7,26 @@ package com.alc.module_project.http
  * @data: 2021/4/28
  */
 class BuildFactory {
-    private var instance: BuildFactory? = null
-    private var gankHttps: Any? = null
-    private var doubanHttps: Any? = null
-    private var dongtingHttps: Any? = null
-    private var firHttps: Any? = null
-    private var wanAndroidHttps: Any? = null
-    private var qsbkHttps: Any? = null
-    private var mtimeHttps: Any? = null
-    private var mtimeTicketHttps: Any? = null
-
-    fun getInstance(): BuildFactory? {
-        if (instance == null) {
-            synchronized(BuildFactory::class.java) {
-                if (instance == null) {
-                    instance = BuildFactory()
+    companion object {
+        private var gankHttps: Any? = null
+        private var doubanHttps: Any? = null
+        private var dongtingHttps: Any? = null
+        private var firHttps: Any? = null
+        private var wanAndroidHttps: Any? = null
+        private var qsbkHttps: Any? = null
+        private var mtimeHttps: Any? = null
+        private var mtimeTicketHttps: Any? = null
+        fun getInstance(): BuildFactory? {
+            var instance: BuildFactory? = null
+            if (instance == null) {
+                synchronized(BuildFactory::class.java) {
+                    if (instance == null) {
+                        instance = BuildFactory()
+                    }
                 }
             }
+            return instance
         }
-        return instance
     }
     fun <T> create(a: Class<T>?, type: String?): T {
         return when (type) {
@@ -33,7 +34,8 @@ class BuildFactory {
                 if (gankHttps == null) {
                     synchronized(BuildFactory::class.java) {
                         if (gankHttps == null) {
-                            gankHttps = HttpUtils.getInstance().getBuilder(type).build().create(a)
+                            gankHttps =
+                                HttpUtils.getInstance().getBuilder(type).build().create(a)
                         }
                     }
                 }
@@ -43,7 +45,8 @@ class BuildFactory {
                 if (doubanHttps == null) {
                     synchronized(BuildFactory::class.java) {
                         if (doubanHttps == null) {
-                            doubanHttps = HttpUtils.getInstance().getBuilder(type).build().create(a)
+                            doubanHttps =
+                                HttpUtils.getInstance().getBuilder(type).build().create(a)
                         }
                     }
                 }
@@ -64,7 +67,8 @@ class BuildFactory {
                 if (firHttps == null) {
                     synchronized(BuildFactory::class.java) {
                         if (firHttps == null) {
-                            firHttps = HttpUtils.getInstance().getBuilder(type).build().create(a)
+                            firHttps =
+                                HttpUtils.getInstance().getBuilder(type).build().create(a)
                         }
                     }
                 }
@@ -85,7 +89,8 @@ class BuildFactory {
                 if (qsbkHttps == null) {
                     synchronized(BuildFactory::class.java) {
                         if (qsbkHttps == null) {
-                            qsbkHttps = HttpUtils.getInstance().getBuilder(type).build().create(a)
+                            qsbkHttps =
+                                HttpUtils.getInstance().getBuilder(type).build().create(a)
                         }
                     }
                 }
@@ -95,7 +100,8 @@ class BuildFactory {
                 if (mtimeHttps == null) {
                     synchronized(BuildFactory::class.java) {
                         if (mtimeHttps == null) {
-                            mtimeHttps = HttpUtils.getInstance().getBuilder(type).build().create(a)
+                            mtimeHttps =
+                                HttpUtils.getInstance().getBuilder(type).build().create(a)
                         }
                     }
                 }
@@ -116,7 +122,8 @@ class BuildFactory {
                 if (gankHttps == null) {
                     synchronized(BuildFactory::class.java) {
                         if (gankHttps == null) {
-                            gankHttps = HttpUtils.getInstance().getBuilder(type).build().create(a)
+                            gankHttps =
+                                HttpUtils.getInstance().getBuilder(type).build().create(a)
                         }
                     }
                 }

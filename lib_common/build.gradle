@@ -64,6 +64,8 @@ dependencies {
     api 'androidx.fragment:fragment-ktx:1.3.0'
     api 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+
     api 'androidx.multidex:multidex:2.0.1'
     api project(':lib_third')
     api project(':fragmentation')
